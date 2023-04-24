@@ -1,0 +1,44 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+            
+        <lightning:recordEditForm aura:id="recordEditForm"
+                                  objectApiName="Lead"
+                                  onsuccess="{!c.mostrarLead}">
+        <lightning:messages />
+        
+        <div class="slds-box slds-theme_default">
+        <h1 style="font-size: 18px; text-align: center">Criar novo Lead</h1>
+            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Name"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Status"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Rating"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="LeadSource"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Company"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="AnnualRevenue"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Website"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Phone"/>
+                </div>
+            </div>           
+        </div>
+        
+        <lightning:button class="slds-m-top_small" type="submit" label="Create new"/>
+        <lightning:button class="slds-m-top_small" variant="destructive" label="Clear" onclick="{!c.limparLead}" />
+        
+            
+    </lightning:recordEditForm>
+</aura:component>
