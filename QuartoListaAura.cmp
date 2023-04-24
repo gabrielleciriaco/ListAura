@@ -1,0 +1,32 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <lightning:recordEditForm aura:id="recordEditForm"
+                              objectApiName="Compra__c"
+                              onsuccess="{!c.adicionarItem}">
+        <lightning:messages />
+        
+        <div class="slds-box slds-theme_default">
+            <h1 style="font-size: 18px; text-align: center">Adicionar novos itens</h1>
+            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Name"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Data_da_Compra__c"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Preco_Unitario__c"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Quantidade__c"/>
+                </div>
+                <div class="slds-col slds-size_6-of-12">
+                    <lightning:inputField fieldName="Preco_Total__c"/>
+                </div>                 
+            </div>
+        </div>       
+      
+        <lightning:button class="slds-m-top_small" type="submit" label="Create new"/>
+    </lightning:recordEditForm>
+</aura:component>
